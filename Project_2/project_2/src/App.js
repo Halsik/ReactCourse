@@ -1,9 +1,17 @@
 import React from "react"
+import "./app.css"
+import Info from "./Components/Info/Info"
+import About from "./Components/about/About"
+import Footer from "./Components/footer/Footer"
 
 
 function App() {
   return(
-   <h1>hello</h1>
+    <div className="container">
+        <Info />
+        <About />
+        <Footer />
+    </div>
   )
 }
 

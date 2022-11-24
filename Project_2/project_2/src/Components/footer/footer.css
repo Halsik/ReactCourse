@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-button {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px 0 10px;
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+}
+
+.footer-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.footer-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161619;
+    height: 80px;
+    border-radius: 0 0 15px 15px;
+}
