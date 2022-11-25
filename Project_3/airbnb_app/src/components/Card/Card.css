@@ -1,0 +1,57 @@
+.card-container {
+    height: 60vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    height: 70%;
+    width: 20%;
+    background-image: url("./CardImage.jpeg");
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 30px;
+}
+
+.card-rating {
+    display: flex;
+    width: 20%;
+    height: 25px;
+    padding-top: 5px;
+}
+
+img {
+    display: flex;
+    height: 20px;
+}
+
+.rating-text {
+    margin-top: 2px;
+    margin-left: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.card-text {
+    text-align: left;
+    margin-top: 8px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.card-text-container {
+    width: 20%;
+    height: 50px;
+    font-size: 15px;
+}
+
+span {
+    color: gray;
+}
+
+.bold {
+    font-weight: bolder;
+    color: black;
+}

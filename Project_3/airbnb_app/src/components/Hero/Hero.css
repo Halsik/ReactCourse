@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;800&display=swap');
+
+.image-container {
+    height: 89vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.text-container {
+    height: 550px;
+    width: 35%;
+    padding: 100px 40px;
+}
+
+.image-box {
+    display: flex;
+    height: 550px;
+    width: 65%;
+}
+
+.image-section {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-image {
+    width: 90%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+
+.second-image {
+    width: 90%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+.image-section:nth-child(1) {
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.image-section:nth-child(1) > .first-image {
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?footbal);
+}
+
+.image-section:nth-child(2) {
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+
+.image-section:nth-child(2) > .first-image {
+    height: 150px;
+    background-image: url(https://source.unsplash.com/1600x900/?rugby);
+    
+}
+
+.image-section:nth-child(2) > .second-image {
+    height: 220px;
+    margin-top: 0px;
+    background-image: url(https://source.unsplash.com/1600x900/?gym);
+}
+
+.image-section:nth-child(3) {
+    padding-top: 60px;
+    justify-content: space-evenly;
+}
+
+.image-section:nth-child(3) > .first-image {
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?baseball);
+}
+
+.image-section:nth-child(3) > .second-image {
+    margin-top: 20px;
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?soccer);
+}
+
+.image-section:nth-child(4) {
+    padding-top: 30px;
+}
+
+.image-section:nth-child(4) > .first-image {
+    margin-bottom: 40px;
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?swim);
+    
+}
+
+.image-section:nth-child(4) > .second-image {
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?basketball);
+}
+
+.image-section:nth-child(5) {
+    padding-top: 70px;
+}
+
+.image-section:nth-child(5) > .first-image {
+    margin-bottom: 40px;
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?volleyball);
+}
+
+.image-section:nth-child(5) > .second-image {
+    height: 220px;
+    background-image: url(https://source.unsplash.com/1600x900/?tenis);
+}
+
+.text-container-header {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text-container-p {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.text-container-button {
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    border: 3px solid #ed555d;
+    background-color: white;
+    font-size: 23px;
+    font-weight: 800;
+    color: #ed555d;
+    transition: 0.2s;
+}
+
+.text-container-button:hover {
+    transform: scale(1.05);
+    background-color: #ed555d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 1px #ed555d;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .image-container {
+        display: block;
+    }
+    .text-container {
+        width: 100%;
+    }
+    .image-box {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
