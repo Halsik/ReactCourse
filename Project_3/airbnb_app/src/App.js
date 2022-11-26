@@ -3,13 +3,15 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Card from './components/Card/Card'
+import Challanges from './components/challanges/challanges'
 
 function App() {
   return (
    <div className='app-container'>
-      <Navbar />
+      <Challanges />
+      {/* <Navbar />
       <Hero />
-      <Card />
+      <Card /> */}
    </div>
   );
 }
