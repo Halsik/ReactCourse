@@ -2,17 +2,20 @@ import React from "react";
 import "./Card.css"
 import Star from "./star.png"
 
-function Card() {
+
+function Card(props) {
     return(
         <div className="card-container">
-            <div className="card"></div>
+            <div className="card">
+                <img src={props.img}/>
+            </div>
             <div className="card-rating">
                 <img src={Star}/>
-                <p className="rating-text">5.0 <span>(6) - USA</span></p>
+                <p className="rating-text">{props.rating} <span>{props.allRatings} - {props.country}</span></p>
             </div>
             <div className="card-text-container">
-            <p className="card-text">Life lesson with Katie Zaferes</p>
-            <p className="card-text"><span className="bold">From 125$</span> / person</p>
+            <p className="card-text">{props.description}</p>
+            <p className="card-text"><span className="bold">From {props.cost}$</span> / person</p>
             </div>
                 
             

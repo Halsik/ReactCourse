@@ -1,5 +1,5 @@
 import React from "react";
-import Phone from '../challanges/phone.png'
+import Phone from './phone.png'
 import Mail from './mail.png'
 
 function Box(props) {
