@@ -163,6 +163,7 @@
 @media only screen and (max-width: 1000px) {
     .image-container {
         display: block;
+        height: 140vh;
     }
     .text-container {
         width: 100%;
