@@ -1,8 +1,8 @@
 import React from "react";
+import jokesData from "./jokesData";
 
 
 function Jokes(props) {
-        
     return(
         <div className="joke">
         <h2>{props.setup}</h2>

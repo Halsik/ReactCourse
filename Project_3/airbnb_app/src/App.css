@@ -4,8 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  height: 210vh;
+  height: 160vh;
   width: 100%;
+}
+
+.cards {
+  display: flex;
+  overflow-x: auto;
 }
 
 

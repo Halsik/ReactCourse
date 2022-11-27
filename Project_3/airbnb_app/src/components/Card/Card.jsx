@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css"
 import Star from "./star.png"
-
+import cardImage from "./CardImage.jpeg"
 
 function Card(props) {
     return(
