@@ -13,12 +13,8 @@ function App() {
       const cardDetails = cardData.map(details => {
         return(
           <Card 
-            img={details.coverImg}
-            rating={details.stats.rating}
-            allRatings={details.stats.reviewCount}
-            country={details.country}
-            description={details.title}
-            cost={details.price}
+            key={details.id}
+            details={details}
       />
         )
       })
