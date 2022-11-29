@@ -1,9 +1,12 @@
 import Sydney from './images/sydney.webp'
+import Japan from './images/japan.jpeg'
+import Norway from './images/norway.webp'
+
 
 export default [
     {
         id:1,
-        img: Sydney,
+        img: Japan,
         country:"JAPAN",
         place:"Mount Fuji",
         date:"12 Jan, 2021 - 24 Jan, 2021",
@@ -19,10 +22,11 @@ export default [
     },
     {
         id:3,
-        img: Sydney,
+        img: Norway,
         country:"NORWAY",
         place:"Geirangerfjord",
         date:"01 Oct, 2021 - 18 Nov, 2021",
         text:"The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality."
     },
+
 ]
