@@ -3,6 +3,7 @@ import './hero.css'
 import Sydney from '../images/sydney.webp'
 
 function Hero(props) {
+    
     return(
         <section className="hero-container">
             <div className="hero-image-container">

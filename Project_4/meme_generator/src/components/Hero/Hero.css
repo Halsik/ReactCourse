@@ -1,0 +1,51 @@
+.hero-form-container {
+    margin-top: 30px;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-form {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-form-inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#hero-text-input {
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.295);
+    text-align: center;
+    height: 50px;
+    width: 40%;
+}
+
+#hero-form-submit {
+    border-radius: 30px;
+    border: 3px solid #EB5160;
+    font-size:20px;
+    margin-top: 30px;
+    height: 50px;
+    width: 90%;
+    background-color: #EB5160;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+#hero-form-submit:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}

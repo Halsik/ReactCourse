@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruluko&display=swap');
+
+.app-container {
+    height: 100vh;
+    width: 100%;
+    background-color: #1E1E24;
+    font-family: 'Ruluko', sans-serif;
+}
+
+.challange-container {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(23, 23, 23);
+    font-family: 'Ruluko', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

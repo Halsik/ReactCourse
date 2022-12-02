@@ -1,0 +1,24 @@
+.navbar {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px 5px 40px;
+    color: white;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo > img {
+    margin-right: 10px;
+    height: 50px;
+}
+
+.navbar-title {
+    color: rgba(255, 255, 255, 0.424)
+}
