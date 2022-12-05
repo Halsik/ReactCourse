@@ -7,15 +7,17 @@ import Challange from './challanges/Challange';
 function App() {
   return (
     // Challange
-    // <div className='challange-container'>
-    //   <Challange />
-    // </div>
-
-
-    <div className='app-container'>
-      <Navbar />
-      <Hero />
+    <div className='challange-container'>
+      <Challange 
+      darkMode={false}/>
     </div>
+
+    // MEME GENERATOR
+
+    // <div className='app-container'>
+    //   <Navbar />
+    //   <Hero />
+    // </div>
   );
 }
 

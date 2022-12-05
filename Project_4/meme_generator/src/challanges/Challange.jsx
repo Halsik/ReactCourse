@@ -1,64 +1,141 @@
 import React, {useState} from "react";
 import './challange.css'
+import Counter from "./counterChallange";
+import ImageChallange from "./ImageChallange";
+import empty from './empty.png'
+import fill from './filled.png'
+import boxData from "./boxData";
 
 
-function Challange() {
+function Challange(props) {
 
-    // Challange one
+    // Challange 1
 
-    // const [state, setNewWord] = useState("Yes")
+//   const [thingsArray, setThingsArray] = useState(["Thing 1", "Thing 2"])
 
-    // const handleClick = () => {
-    //     setNewWord("No")
+//   const newElement = thingsArray.map(item => {
+//     return <h1>{item}</h1>
+//    })
+
+//    const addNewThing = () => {
+//         setThingsArray(prevThingsArray => {
+//             return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+//         })
+//    }
+
+//     return(
+//         <div className="challange-container">
+//         <button onClick={addNewThing}>Add Element</button>
+//         {newElement}
+//         </div>
+
+
+//     )
+
+    // Challange 2
+
+// const [isImportant, setIsImportant] = useState("Yes")
+
+//     const handleClick = () => {
+//         setIsImportant("No")
+//     }
+
+//     return(
+//         <div className="challange-container">
+//         <h1 onClick={handleClick}>Is state important to know?</h1>
+//         <h1>{isImportant}</h1>
+//         </div>
+//     )
+
+    // Challange 3
+
+    // const [counter, setCounter] = useState(0)
+
+    // const minus = () => {
+    //     setCounter(prevCounter => prevCounter - 1)
+    // }
+    // const plus = () => {
+    //     setCounter(prevCounter => prevCounter + 1)
     // }
 
-    // console.log(state)
-
-    // const thingsArray = [state]
-
-    // const thingsElements = thingsArray.map(element => 
-        
-    //     <p key={element}>{element}</p>)
-        
-    // // const addNewElement = () => {
-    // //     const newThingText = `thing ${thingsArray.length + 1}`
-    // //     thingsArray.push(newThingText) 
-    // //     console.log(thingsArray)
-    // // }
-
     // return(
-    //     <div className="challange-button-container">
-    //         <button onClick={handleClick}>Add things</button>
-    //         {thingsElements}
+    //     <div className="challange-container-row">
+    //         <h2 onClick={minus}>-</h2>
+    //         <Counter 
+    //             number={counter}
+    //         />
+    //         <h2 onClick={plus}>+</h2>
     //     </div>
     // )
 
-    // Challange Two Counter USESTATE
+    // Challange 4
 
-  const [result, setNewResult] = useState(0)
 
-  const plus = () => {
-    setNewResult(prevResult => prevResult + 1)
-  }
+//     const [isGoingOut, setIsGoingOut] = useState(true)
 
-  const minus = () => {
-    setNewResult(prevResult => prevResult - 1)
-  }
+//     const handleClick = () => { 
+//         setIsGoingOut(prevIsGoingOut => !prevIsGoingOut)
+//     }
+   
 
-    return(
-        <div className="second-button-container">
-            <div className="minus"  onClick={minus}>
-                <p className="icon">-</p>
-            </div>
-            <div className="result">
-                <p className="icon">{result}</p>
-            </div>
-            <div className="plus"  onClick={plus}>
-                <p className="icon">+</p>
-            </div>
-        </div>
-    )
 
+//     return(
+
+//         <div className="challange-container">
+//            <h1 onClick={handleClick}>Is state important to know?</h1>
+//            <h1>{isGoingOut ? "Yes" : "No"}</h1>
+//       </div>
+
+// )
+
+    // Challange 5
+
+    // const [contact, setContact] = useState({
+    //     name: "Michał Hals",
+    //     phone: "123-123-123",
+    //     mail: "asdasd@gmail.com",
+    //     isFavourite: true
+    // })
+
+    // let starIcon = contact.isFavourite ? fill : empty
+
+    // const favourite = () => {
+    //     setContact(prevContact => {
+    //         return {...prevContact,
+    //                 isFavourite:!prevContact.isFavourite}
+    //     })
+    // }
+
+    // return(
+    //         <div className="challange-container">
+    //             <h1>Name: {contact.name}</h1>
+    //             <h1>Phote: {contact.phone}</h1>
+    //             <h1>Email: {contact.mail}</h1>
+    //             <ImageChallange
+    //             isFilled= {starIcon}
+    //             handleClick = {favourite}
+    //             />
+    //         </div>
+    // )
+
+    // Challange 6
+
+        const [boxArray, setBoxArray] = useState(boxData)
+
+
+        const style = {
+            backgroundColor: props.darkMode ? "black" : "gray"
+        }
+        const newBoxArray = boxArray.map(square => {
+            return  <div style={style} className="square" key={square.id}></div>
+        }
+
+
+        )
+
+        return (
+            <div>{newBoxArray}</div>
+        )
 }
 
 export default Challange
