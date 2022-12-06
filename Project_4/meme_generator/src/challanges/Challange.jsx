@@ -5,6 +5,7 @@ import ImageChallange from "./ImageChallange";
 import empty from './empty.png'
 import fill from './filled.png'
 import boxData from "./boxData";
+import Box from "./Box";
 
 
 function Challange(props) {
@@ -121,13 +122,22 @@ function Challange(props) {
     // Challange 6
 
         const [boxArray, setBoxArray] = useState(boxData)
-
-
-        const style = {
-            backgroundColor: props.darkMode ? "black" : "gray"
+        
+        const clicked = (id) => {
+            setBoxArray(prevBoxArray => {
+                return prevBoxArray.map(square => {
+                   return square.id === id ? {...square, on: !square.on} : square
+                })
+            })
+            
         }
+
         const newBoxArray = boxArray.map(square => {
-            return  <div style={style} className="square" key={square.id}></div>
+            return  <Box 
+                        key={square.id}
+                        id={square.id}
+                        on={square.on}
+                        clicked={clicked}/>
         }
 
 

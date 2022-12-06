@@ -8,8 +8,7 @@ function App() {
   return (
     // Challange
     <div className='challange-container'>
-      <Challange 
-      darkMode={false}/>
+      <Challange />
     </div>
 
     // MEME GENERATOR
