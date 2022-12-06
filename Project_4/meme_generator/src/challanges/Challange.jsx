@@ -121,30 +121,75 @@ function Challange(props) {
 
     // Challange 6
 
-        const [boxArray, setBoxArray] = useState(boxData)
+        // const [boxArray, setBoxArray] = useState(boxData)
         
-        const clicked = (id) => {
-            setBoxArray(prevBoxArray => {
-                return prevBoxArray.map(square => {
-                   return square.id === id ? {...square, on: !square.on} : square
-                })
-            })
+        // const clicked = (id) => {
+        //     setBoxArray(prevBoxArray => {
+        //         return prevBoxArray.map(square => {
+        //            return square.id === id ? {...square, on: !square.on} : square
+                   
+        //         })
+        //     })
             
+        // }
+
+        // const newBoxArray = boxArray.map(square => {
+        //     return  <Box 
+        //                 key={square.id}
+        //                 id={square.id}
+        //                 on={square.on}
+        //                 clicked={clicked}/>
+        // }
+
+
+        // )
+
+        // return (
+        //     <div>{newBoxArray}</div>
+        // )
+
+        const [formData, setFormData] = useState({
+            firstName:'',
+            lastName:'',
+            email:''
+        })
+
+        console.log(formData)
+
+        const handleForm = (event) => {
+            setFormData(prevFormData => {
+                return {...prevFormData,
+                        [event.target.name]: event.target.value
+                    }
+            })
         }
+        
 
-        const newBoxArray = boxArray.map(square => {
-            return  <Box 
-                        key={square.id}
-                        id={square.id}
-                        on={square.on}
-                        clicked={clicked}/>
-        }
-
-
-        )
-
-        return (
-            <div>{newBoxArray}</div>
+        return(
+            <form>
+                <input 
+                    type="text" 
+                    placeholder="first name" 
+                    onChange={handleForm}
+                    name="firstName"
+                    value={formData.firstName}
+                />
+                <input 
+                    type="text" 
+                    placeholder="last name" 
+                    onChange={handleForm}
+                    name="lastName"
+                    value={formData.lastName}
+                />
+                <input 
+                    type="email" 
+                    placeholder="email" 
+                    onChange={handleForm}
+                    name="email"
+                    value={formData.emailName}
+                />
+                    
+            </form>
         )
 }
 
