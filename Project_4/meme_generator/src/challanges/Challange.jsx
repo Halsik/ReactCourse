@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './challange.css'
 import Counter from "./counterChallange";
 import ImageChallange from "./ImageChallange";
@@ -148,48 +148,77 @@ function Challange(props) {
         //     <div>{newBoxArray}</div>
         // )
 
-        const [formData, setFormData] = useState({
-            firstName:'',
-            lastName:'',
-            email:''
-        })
+        //Challange 7
 
-        console.log(formData)
+        // const [formData, setFormData] = useState({
+        //     firstName:'',
+        //     lastName:'',
+        //     email:''
+        // })
 
-        const handleForm = (event) => {
-            setFormData(prevFormData => {
-                return {...prevFormData,
-                        [event.target.name]: event.target.value
-                    }
-            })
-        }
+        // console.log(formData)
+
+        // const handleForm = (event) => {
+        //     setFormData(prevFormData => {
+        //         return {...prevFormData,
+        //                 [event.target.name]: event.target.value
+        //             }
+        //     })
+        // }
         
 
-        return(
-            <form>
-                <input 
-                    type="text" 
-                    placeholder="first name" 
-                    onChange={handleForm}
-                    name="firstName"
-                    value={formData.firstName}
-                />
-                <input 
-                    type="text" 
-                    placeholder="last name" 
-                    onChange={handleForm}
-                    name="lastName"
-                    value={formData.lastName}
-                />
-                <input 
-                    type="email" 
-                    placeholder="email" 
-                    onChange={handleForm}
-                    name="email"
-                    value={formData.emailName}
-                />
+        // return(
+        //     <form>
+        //         <input 
+        //             type="text" 
+        //             placeholder="first name" 
+        //             onChange={handleForm}
+        //             name="firstName"
+        //             value={formData.firstName}
+        //         />
+        //         <input 
+        //             type="text" 
+        //             placeholder="last name" 
+        //             onChange={handleForm}
+        //             name="lastName"
+        //             value={formData.lastName}
+        //         />
+        //         <input 
+        //             type="email" 
+        //             placeholder="email" 
+        //             onChange={handleForm}
+        //             name="email"
+        //             value={formData.emailName}
+        //         />
                     
-            </form>
+        //     </form>
+        // )
+
+        // Challange 8 UseEffect()
+
+        const [starWarsData, setStarWarsData] = useState({})
+        const [count, setCount] = useState(1)
+
+       
+
+        function addOne() {
+            setCount(count + 1)
+        }
+
+
+        useEffect(() => {
+        console.log("Effect run")
+            fetch(`https://swapi.dev/api/people/${count}`)
+                .then(res => res.json())
+                .then(data => setStarWarsData(data))
+        }, [count])    
+
+        return(
+            <div>
+                <pre>{JSON.stringify(starWarsData, null, 1)}</pre>
+                <h1>Button clicked {count} times</h1>
+                <button onClick={addOne}>Add 1 count</button>
+            </div>
         )
 }
 

@@ -7,16 +7,16 @@ import Challange from './challanges/Challange';
 function App() {
   return (
     // Challange
-    // <div className='challange-container'>
-    //   <Challange />
-    // </div>
+    <div className='challange-container'>
+      <Challange />
+    </div>
 
     // MEME GENERATOR
 
-    <div className='app-container'>
-      <Navbar />
-      <Hero />
-    </div>
+    // <div className='app-container'>
+    //   <Navbar />
+    //   <Hero />
+    // </div>
   );
 }
 
