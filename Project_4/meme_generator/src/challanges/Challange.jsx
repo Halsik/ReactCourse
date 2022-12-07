@@ -6,6 +6,7 @@ import empty from './empty.png'
 import fill from './filled.png'
 import boxData from "./boxData";
 import Box from "./Box";
+import WindowTracker from "./WindowTracker";
 
 
 function Challange(props) {
@@ -196,28 +197,44 @@ function Challange(props) {
 
         // Challange 8 UseEffect()
 
-        const [starWarsData, setStarWarsData] = useState({})
-        const [count, setCount] = useState(1)
+        // const [starWarsData, setStarWarsData] = useState({})
+        // const [count, setCount] = useState(1)
 
        
 
-        function addOne() {
-            setCount(count + 1)
+        // function addOne() {
+        //     setCount(count + 1)
+        // }
+
+
+        // useEffect(() => {
+        // console.log("Effect run")
+        //     fetch(`https://swapi.dev/api/people/${count}`)
+        //         .then(res => res.json())
+        //         .then(data => setStarWarsData(data))
+        // }, [count])    
+
+        // return(
+        //     <div>
+        //         <pre>{JSON.stringify(starWarsData, null, 1)}</pre>
+        //         <h1>Button clicked {count} times</h1>
+        //         <button onClick={addOne}>Add 1 count</button>
+        //     </div>
+        // )
+
+        // Challange 9
+
+        const [show, setShow] = useState(true)
+
+        const toggleShow = () => {
+            setShow(prevShow => !prevShow)
+            console.log(show)
         }
 
-
-        useEffect(() => {
-        console.log("Effect run")
-            fetch(`https://swapi.dev/api/people/${count}`)
-                .then(res => res.json())
-                .then(data => setStarWarsData(data))
-        }, [count])    
-
         return(
-            <div>
-                <pre>{JSON.stringify(starWarsData, null, 1)}</pre>
-                <h1>Button clicked {count} times</h1>
-                <button onClick={addOne}>Add 1 count</button>
+            <div className="container">
+                <button onClick={toggleShow}>Toogle WindowTracker</button>
+                {show && <WindowTracker />}
             </div>
         )
 }

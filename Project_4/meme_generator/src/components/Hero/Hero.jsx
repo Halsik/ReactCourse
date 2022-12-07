@@ -1,27 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './Hero.css'
-import memeData from '../memeData'
+
 
 function Hero() {
 
         
 
-        const [allMemeImage, setAllMemeImage] = useState(memeData)
+        const [allMemeImage, setAllMemeImage] = useState([])
 
         const [meme, setMeme] = useState({
             topText:'',
             bottomText:'',
-            randomImage:allMemeImage.data.memes[2].url
+            randomImage: "https://i.imgflip.com/5c7lwq.png"
         })
-        console.log(meme)
-
-
+        
         //get new meme image
 
         function getMemeImage() {
-            const memeArray = allMemeImage.data.memes
-            const randomNumber = Math.floor(Math.random() * memeArray.length)
-            const url = memeArray[randomNumber].url
+            const randomNumber = Math.floor(Math.random() * allMemeImage.length)
+            const url = allMemeImage[randomNumber].url
             setMeme(prevMeme => {
                 return {...prevMeme,
                         randomImage: url     
@@ -36,6 +33,14 @@ function Hero() {
                 }
             })
         }
+
+        useEffect(() => {
+            fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemeImage(data.data.memes))
+        }, [])
+
+        console.log(allMemeImage)
         
     return(
         <div className="comp-container">
