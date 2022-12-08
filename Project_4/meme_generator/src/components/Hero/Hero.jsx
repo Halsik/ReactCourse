@@ -40,7 +40,7 @@ function Hero() {
             .then(data => setAllMemeImage(data.data.memes))
         }, [])
 
-        console.log(allMemeImage)
+        
         
     return(
         <div className="comp-container">
